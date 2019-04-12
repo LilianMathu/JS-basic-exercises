@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Q&A on functions
+    </title>
+    <meta charset="UTF-8">
+    </meta>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="#">Q&A-on-functions</a>
+        <a href="#">Object</a>
+        <a href="">About</a>
+    </div>
+
+    <pre>
+1. Write a JavaScript program to display the current day and time in the following format.  
+        
+        Sample Output : Today is : Tuesday.
+        Current time is : 10 PM : 30 : 38
+        Click me to see the solution
+        <br>
+        <br>
+Note: JavaScript counts months from 0 to 11. January is 0. December is 11.
+         <br>
+JavaScript Stores Dates as Milliseconds JavaScript stores dates as number of milliseconds since 
+January 01, 1970, 00:00:00 UTC (Universal Time Coordinated). Zero time is January 01, 1970 00:00:00 UTC.
+Now the time is: 1555054975213 milliseconds past January 01, 1970.
+When you display a date object in HTML, it is automatically converted to a string, with the toString() method.
+         <br>
+
+ The toUTCString() method converts a date to a UTC string (a date display standard).
+            Example
+            var d = new Date();
+            document.getElementById("demo").innerHTML = d.toUTCString();
+            <br>
+           results ->Fri, 12 Apr 2019 07:58:23 GMT
+<br>Date and time is separated with a capital T.
+UTC time is defined with a capital letter Z.
+If you want to modify the time relative to UTC, remove the Z and add +HH:MM or -HH:MM instead:
+           Example
+           var d = new Date("2015-03-25T12:00:00-06:30");
+           <br>
+
+<b>Date Input - Parsing Dates</b>
+If you have a valid date string, you can use the Date.parse() method to convert it to milliseconds.
+<br>
+
+
+<b>Method 	                    Description</b>
+getFullYear() 	           Get the year as a four digit number (yyyy)
+getMonth() 	           Get the month as a number (0-11)
+getDate() 	           Get the day as a number (1-31)
+getHours() 	           Get the hour (0-23)
+getMinutes() 	           Get the minute (0-59)
+getSeconds() 	           Get the second (0-59)
+getMilliseconds() 	   Get the millisecond (0-999)
+getTime() 	           Get the time (milliseconds since January 1, 1970)
+getDay() 	           Get the weekday as a number (0-6)
+Date.now() 	           Get the time. ECMAScript 5.
+
+<br><br>
+<b>UTC Date Methods</b>
+
+UTC date methods are used for working with UTC dates (Universal Time Zone dates):
+<b>Method                     	Description</b>
+getUTCDate() 	                Same as getDate(), but returns the UTC date
+getUTCDay() 	                Same as getDay(), but returns the UTC day
+getUTCFullYear() 	        Same as getFullYear(), but returns the UTC year
+getUTCHours() 	                Same as getHours(), but returns the UTC hour
+getUTCMilliseconds() 	        Same as getMilliseconds(), but returns the UTC milliseconds
+getUTCMinutes() 	        Same as getMinutes(), but returns the UTC minutes
+getUTCMonth() 	                Same as getMonth(), but returns the UTC month
+getUTCSeconds() 	        Same as getSeconds(), but returns the UTC seconds
+<br<<br>
+
+<b>Set Date Methods</b>
+Set Date methods are used for setting a part of a date:
+
+<b>Method 	                            Description</b>
+setDate() 	                    Set the day as a number (1-31)
+setFullYear() 	                    Set the year (optionally month and day)
+setHours() 	                    Set the hour (0-23)
+setMilliseconds() 	            Set the milliseconds (0-999)
+setMinutes() 	                    Set the minutes (0-59)
+setMonth() 	                    Set the month (0-11)
+setSeconds() 	                    Set the seconds (0-59)
+setTime() 	                    Set the time (milliseconds since January 1, 1970)
+
+<br><br>
+
+
+The <b>toLocaleTimeString()</b> method returns a string with a language sensitive representation of the time portion of this date. 
+<code>
+    var event = new Date('August 19, 1975 23:15:30 GMT+00:00');
+    console.log(event.toLocaleTimeString('en-US'));
+    // expected output: 1:15:30 AM
+</code>
+
+</pre>
+
+
+</body>
+
+</html>
